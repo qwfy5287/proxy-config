@@ -27,23 +27,28 @@
     <ChainList/>
     <RuleList>
         <Rule enabled="true">
+            <Name>"Hiddify Next" [auto-created]</Name>
+            <Applications>"Hiddify Next"</Applications>
+            <Action type="Direct"/>
+        </Rule>
+        <Rule enabled="true">
             <Name>clash-meta [auto-created]</Name>
             <Applications>clash-meta</Applications>
             <Action type="Direct"/>
         </Rule>
         <Rule enabled="true">
             <Name>direct-app</Name>
-            <Applications>"ClashX Meta.app"; "ClashX Meta"; com.metacubex.ClashX.meta; "SFM.app"; "SFM"; io.nekohasekai.sfa.independent;com.metacubex.*; "Google Chrome.app"; "Google Chrome"; com.google.Chrome;"Google Chrome Helper”;</Applications>
+            <Applications>"ClashX Meta.app"; "ClashX Meta"; com.metacubex.ClashX.meta; "SFM.app"; "SFM"; io.nekohasekai.sfa.independent;com.metacubex.*; "Google Chrome.app"; "Google Chrome"; com.google.Chrome;"Google Chrome Helper”;"Clash Verge.app"; "Clash Verge"</Applications>
             <Action type="Direct"/>
         </Rule>
         <Rule enabled="true">
             <Name>only-app</Name>
-            <Applications>"Microsoft Edge.app"; "Microsoft Edge"; com.microsoft.edgemac; "Microsoft Edge Helper”; "spotube.app"; "spotube"; oss.krtirtho.spotube</Applications>
+            <Applications>"Microsoft Edge.app"; "Microsoft Edge"; com.microsoft.edgemac; "Microsoft Edge Helper”; "spotube.app"; "spotube"; oss.krtirtho.spotube; "Zed.app"; "Zed"; dev.zed.Zed</Applications>
             <Action type="Proxy">100</Action>
         </Rule>
         <Rule enabled="true">
             <Name>only-domain</Name>
-            <Targets>*.github.com;*.googlevideo.com;*.spotify.com;*.youtube.com;*.ajay.app;*.crates.io;*.fastly.net;*.npmjs.org;*.githubusercontent.com;*.docker.io;*.google.com;pub.dev;*.googleapis.com;cocoapods.org</Targets>
+            <Targets>*.github.com;*.googlevideo.com;*.spotify.com;*.youtube.com;*.ajay.app;*.gitlab.com;gitlab.com;*.crates.io;*.fastly.net;*.npmjs.org;*.githubusercontent.com;*.docker.io;*.google.com;pub.dev;*.googleapis.com;cocoapods.org</Targets>
             <Action type="Proxy">100</Action>
         </Rule>
         <Rule enabled="true">

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxifierProfile version="101" platform="MacOSX" product_id="2" product_minver="200">
+    <Options>
+        <Resolve>
+            <AutoModeDetection enabled="false"/>
+            <ViaProxy enabled="true">
+                <TryLocalDnsFirst enabled="false"/>
+            </ViaProxy>
+            <ExclusionList ExcludeSimpleHostnames="true" ExcludeLocalhost="true" ExcludeSelfHostname="true" ExcludeLocalDomain="true">localhost;%SimpleHostnames%;%ComputerName%;*.local;
+</ExclusionList>
+        </Resolve>
+        <Encryption mode="disabled"/>
+        <HttpProxiesSupport enabled="false"/>
+        <HandleDirectConnections enabled="false"/>
+        <ConnectionLoopDetection enabled="true"/>
+        <ProcessServices enabled="true"/>
+        <ProcessOtherUsers enabled="true"/>
+        <BlockUDP443 enabled="false"/>
+    </Options>
+    <ProxyList>
+        <Proxy id="100" type="SOCKS5">
+            <Address>127.0.0.1</Address>
+            <Port>2334</Port>
+            <Options>0</Options>
+        </Proxy>
+    </ProxyList>
+    <ChainList/>
+    <RuleList>
+        <Rule enabled="true">
+            <Name>clash-meta [auto-created]</Name>
+            <Applications>clash-meta</Applications>
+            <Action type="Direct"/>
+        </Rule>
+        <Rule enabled="true">
+            <Name>direct-app</Name>
+            <Applications>"ClashX Meta.app"; "ClashX Meta"; com.metacubex.ClashX.meta; "SFM.app"; "SFM"; io.nekohasekai.sfa.independent;com.metacubex.*; "Google Chrome.app"; "Google Chrome"; com.google.Chrome;"Google Chrome Helper”;</Applications>
+            <Action type="Direct"/>
+        </Rule>
+        <Rule enabled="true">
+            <Name>only-app</Name>
+            <Applications>"Microsoft Edge.app"; "Microsoft Edge"; com.microsoft.edgemac; "Microsoft Edge Helper”; "spotube.app"; "spotube"; oss.krtirtho.spotube</Applications>
+            <Action type="Proxy">100</Action>
+        </Rule>
+        <Rule enabled="true">
+            <Name>only-domain</Name>
+            <Targets>*.github.com;*.googlevideo.com;*.spotify.com;*.youtube.com;*.ajay.app;*.crates.io;*.fastly.net;*.npmjs.org;*.githubusercontent.com;*.docker.io;*.google.com;pub.dev;*.googleapis.com;cocoapods.org</Targets>
+            <Action type="Proxy">100</Action>
+        </Rule>
+        <Rule enabled="true">
+            <Name>Default</Name>
+            <Action type="Direct"/>
+        </Rule>
+    </RuleList>
+</ProxifierProfile>

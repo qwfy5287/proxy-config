@@ -48,7 +48,7 @@
         </Rule>
         <Rule enabled="true">
             <Name>only-domain</Name>
-            <Targets>*.github.com;*.googlevideo.com;*.spotify.com;*.youtube.com;*.ajay.app;*.gitlab.com;gitlab.com;*.crates.io;*.fastly.net;*.npmjs.org;*.githubusercontent.com;*.docker.io;*.google.com;pub.dev;*.googleapis.com;cocoapods.org</Targets>
+            <Targets>*.github.com;*.googlevideo.com;*.spotify.com;*.youtube.com;*.ajay.app;*.gitlab.com;gitlab.com;*.crates.io;*.fastly.net;*.npmjs.org;*.githubusercontent.com;*.docker.io;*.google.com;pub.dev;*.googleapis.com;cocoapods.org;*.github.io</Targets>
             <Action type="Proxy">100</Action>
         </Rule>
         <Rule enabled="true">
